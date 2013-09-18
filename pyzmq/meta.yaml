@@ -16,10 +16,11 @@ build:
 requirements:
   build:
     - python
-    - zeromq
+    - zeromq [not win]
 
   run:
     - python
+    - zeromq [not win]
 
 test:
   # Python imports
