@@ -1,4 +1,7 @@
-"%PYTHON%" setup.py configure --zmq "%PREFIX%"
+:: must be run in Win SDK 7.0 env after `setenv /x64 /release`
+set DISTUTILS_USE_SDK=1
+
+"%PYTHON%" setup.py configure --zmq=bundled
 if errorlevel 1 exit 1
 
 "%PYTHON%" setup.py install
